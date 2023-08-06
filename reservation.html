@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Online Reservation System -->
+    <section id="reservation" class="py-10 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Make a Reservation</h2>
+            <form id="reservationForm" class="max-w-md mx-auto mt-4">
+                <div class="mb-4">
+                    <label for="date" class="block font-bold">Date:</label>
+                    <input type="date" id="date" name="date" class="w-full rounded-md p-2 border border-gray-400"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="time" class="block font-bold">Time:</label>
+                    <input type="time" id="time" name="time" class="w-full rounded-md p-2 border border-gray-400"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="partySize" class="block font-bold">Party Size:</label>
+                    <input type="number" id="partySize" name="partySize" min="1"
+                        class="w-full rounded-md p-2 border border-gray-400" required>
+                </div>
+                <div class="mb-4">
+                    <label for="contactName" class="block font-bold">Contact Name:</label>
+                    <input type="text" id="contactName" name="contactName"
+                        class="w-full rounded-md p-2 border border-gray-400" required>
+                </div>
+                <div class="mb-4">
+                    <label for="contactEmail" class="block font-bold">Contact Email:</label>
+                    <input type="email" id="contactEmail" name="contactEmail"
+                        class="w-full rounded-md p-2 border border-gray-400" required>
+                </div>
+                <div class="mb-4">
+                    <label for="contactPhone" class="block font-bold">Contact Phone:</label>
+                    <input type="tel" id="contactPhone" name="contactPhone"
+                        class="w-full rounded-md p-2 border border-gray-400" required>
+                </div>
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Submit
+                    Reservation</button>
+            </form>
+            <div id="reservationMessage" class="hidden text-center mt-4"></div>
+        </div>
+    </section>
+    <script src="./app.js"></script>
+</body>
+</html>
