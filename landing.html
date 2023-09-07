@@ -4,101 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="./landing.css" rel="stylesheet">
+    <title>Landing Page</title>
 </head>
 
 <body class="bg-gray-100">
-
-    <!-- Landing Page Content -->
-    <div class="container mx-auto pt-16 px-4">
-        <h1 class="text-4xl font-bold mb-8">Welcome to Our Landing Page</h1>
-
-        <!-- Login and Signup Buttons -->
-        <div class="flex justify-center mb-8">
-            <button id="loginButton" class="px-4 py-2 bg-blue-500 text-white rounded mr-4">Login</button>
-            <button id="signupButton" class="px-4 py-2 bg-green-500 text-white rounded">Signup</button>
+    <!-- Navbar -->
+    <nav class="p-4 bg-transparent flex justify-between">
+        <a href="#brand" class="text-xl font-bold">Your Brand</a>
+        <div class="flex space-x-4">
+            <a href="./about.html" class="hover:text-black-200">About</a>
+            <a href="./service.html" class="hover:text-black-200">Services</a>
+            <a href="./reservation.html" class="hover:text-black-200">Reservation</a>
+            <a href="#contact" class="hover:text-indigo-200">Contact</a>
         </div>
-
-        <!-- OAuth buttons (Google OAuth) -->
-        <div class="text-center mt-4">
-            <button id="googleOAuthButton" class="px-4 py-2 bg-red-500 text-white rounded">Login with Google</button>
+    </nav>
+    <!-- Landing -->
+    <section class="flex items-center justify-center h-screen">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-4">Welcome to Our Website</h1>
+            <p class="text-lg mb-8">Discover the world of cool designs and interactivity.
+            <p>
+            <div class="flex justify-center mb-8">
+                <button class="button">
+                    Login
+                </button>
+                <button class="button">
+                    SignUp
+                </button>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Cards Section -->
-    <section class="container mx-auto py-16 px-4">
-        <h2 class="text-3xl font-bold mb-8">Featured Hotels</h2>
-        <div class="grid grid-cols-3 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white shadow-lg rounded-lg">
-                <img src="https://via.placeholder.com/300x200" alt="Hotel 1"
-                    class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">Hotel 1</h3>
-                    <p class="text-gray-700">Description of Hotel 1.</p>
-                    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">View Details</button>
-                </div>
-            </div>
+    <section class="section service bg-black-10 text-center" aria-label="service">
+        <div class="container">
 
-            <!-- Card 2 -->
-            <div class="bg-white shadow-lg rounded-lg">
-                <img src="https://via.placeholder.com/300x200" alt="Hotel 2"
-                    class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">Hotel 2</h3>
-                    <p class="text-gray-700">Description of Hotel 2.</p>
-                    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">View Details</button>
-                </div>
-            </div>
+            <p class="section-subtitle label-2">Flavors For Royalty</p>
 
-            <!-- Card 3 -->
-            <div class="bg-white shadow-lg rounded-lg">
-                <img src="https://via.placeholder.com/300x200" alt="Hotel 3"
-                    class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">Hotel 3</h3>
-                    <p class="text-gray-700">Description of Hotel 3.</p>
-                    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">View Details</button>
-                </div>
-            </div>
+            <h2 class="headline-1 section-title">We Offer Top Notch</h2>
 
-            <!-- Card 4 -->
-            <div class="bg-white shadow-lg rounded-lg">
-                <img src="https://via.placeholder.com/300x200" alt="Hotel 1"
-                    class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">Hotel 1</h3>
-                    <p class="text-gray-700">Description of Hotel 1.</p>
-                    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">View Details</button>
-                </div>
-            </div>
+            <p class="section-text">
+               It is an Indian multinational restaurant aggregator and food delivery company.
+            </p>
 
-            <!-- Card 5 -->
-            <div class="bg-white shadow-lg rounded-lg">
-                <img src="https://via.placeholder.com/300x200" alt="Hotel 1"
-                    class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">Hotel 1</h3>
-                    <p class="text-gray-700">Description of Hotel 1.</p>
-                    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">View Details</button>
-                </div>
-            </div>
+            <ul class="grid-list">
 
-            <!-- Card 6 -->
-            <div class="bg-white shadow-lg rounded-lg">
-                <img src="https://via.placeholder.com/300x200" alt="Hotel 1"
-                    class="w-full h-48 object-cover rounded-t-lg">
-                <div class="p-4">
-                    <h3 class="text-xl font-bold mb-2">Hotel 1</h3>
-                    <p class="text-gray-700">Description of Hotel 1.</p>
-                    <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded">View Details</button>
-                </div>
-            </div>
+                <li>
+                    <div class="service-card">
+                        <a href="#" class="has-before hover:shine">
+                            <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                                <img src="./assets/images/service-1.jpg" width="285" height="336" loading="lazy"
+                                    alt="Breakfast" class="img-cover">
+                            </figure>
+                        </a>
+                        <div class="card-content">
+                            <h3 class="title-4 card-title">
+                                <a href="#">Breakfast</a>
+                            </h3>
+                            <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="service-card">
+                        <a href="#" class="has-before hover:shine">
+                            <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                                <img src="./assets/images/service-2.jpg" width="285" height="336" loading="lazy"
+                                    alt="Appetizers" class="img-cover">
+                            </figure>
+                        </a>
+                        <div class="card-content">
+                            <h3 class="title-4 card-title">
+                                <a href="#">Appetizers</a>
+                            </h3>
+                            <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="service-card">
+                        <a href="#" class="has-before hover:shine">
+                            <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                                <img src="./assets/images/service-3.jpg" width="285" height="336" loading="lazy"
+                                    alt="Drinks" class="img-cover">
+                            </figure>
+                        </a>
+                        <div class="card-content">
+                            <h3 class="title-4 card-title">
+                                <a href="#">Drinks</a>
+                            </h3>
+                            <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                        </div>
+                    </div>
+                </li>
+                
+
+            </ul>
+
+            <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
+                class="shape shape-1 move-anim">
+            <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+                class="shape shape-2 move-anim">
 
         </div>
     </section>
 
+    <div id="hotelModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="text-xl font-bold mb-2">Hotel Name</h2>
+            <p class="text-gray-700">Description of the hotel.</p>
+            <p>
+                Order Food Online From Restaurants Serving In Mumbai From Swiggy & Get 50% Off On First Order. Get Food
+                Delivered Within 30 Mins.
+            </p>
+        </div>
+    </div>
+    <!-- Brand section -->
+    <section id="brand" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-6">Our Story</h2>
+                <p class="text-gray-800 leading-7">
+                    Restaurant Brands New Zealand Limited operates the New Zealand outlets of KFC, Pizza Hut, and Carl's Jr. together with KFC in Australia, KFC in California, and Pizza Hut and Taco Bell in Hawaii, Guam, and Saipan.
+                </p>
+                <p class="text-gray-800 leading-7 mt-4">
+                    These food brands - some of the world's most famous - are distinguished for their product, look, style, and ambiance, service and for the total experience they deliver to their customers in New Zealand and around the world.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gradient-to-br from-indigo-600 to-purple-400 py-16 text-black text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+            <p class="text-lg mb-8">Why should you partner with us?
+                We enables you to get 60% more revenue, 10x new customers and boost your brand visibility by providing
+                insights to improve your business.</p>
+            <a href="mailto:contact@yourcompany.com"
+                class="block px-6 py-3 bg-white rounded-lg shadow-lg text-lg font-semibold hover:bg-gray-200">Get in
+                Touch</a>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="./app.js"></script>
 </body>
 

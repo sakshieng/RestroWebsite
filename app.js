@@ -4,7 +4,6 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-
 const app = express();
 
 app.use(express.json());
@@ -13,25 +12,17 @@ app.use(session({ secret: 'your-secret-key', resave: true, saveUninitialized: tr
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Serve static files from the "public" directory
+app.use(express.static(__dirname + '/public'));
 
-const loginButton = document.getElementById("loginButton");
-const signupButton = document.getElementById("signupButton");
-
-loginButton.addEventListener("click", () => {
-    console.log("Login button clicked");
+// Handle route for the home page
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
 });
 
-signupButton.addEventListener("click", () => {
-    console.log("Signup button clicked");
-});
-
-const googleOAuthButton = document.getElementById("googleOAuthButton");
-
-googleOAuthButton.addEventListener("click", () => {
-    console.log("Login with Google button clicked");
-});
+// Your passport authentication strategies and routes should go here
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+    console.log(`Server started on port ${PORT}`);
 });
